@@ -1,19 +1,3 @@
-# Use the official Node.js Alpine image as the base
-FROM node:current-alpine
-
-# Set the working directory in the container
-WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install --omit=dev && npm install express
-
-COPY . .
-
-# Expose the port on which the application will run
-EXPOSE 3000
-
-# Start the application
-CMD [ "node", "app.js" ]
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ddc8224851ca4792701dca08a3b1735ce2917f40fbe76b1831b6b6aaa6f191f
+size 563
