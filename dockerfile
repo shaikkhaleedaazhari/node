@@ -10,7 +10,6 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install --omit=dev && npm install express
 
-# Copy the application code to the container
 COPY . .
 
 # Expose the port on which the application will run
